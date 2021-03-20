@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 const Login = () => {
     const { register, handleSubmit, errors } = useForm();
     var provider = new firebase.auth.GoogleAuthProvider();
-    const [setShareData] = useContext(UesContext);
+    const [shareData, setShareData] = useContext(UesContext);
     const history = useHistory();
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
@@ -40,7 +40,7 @@ const Login = () => {
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
-                    console.log('catch error',errorCode,errorMessage)
+                    console.log(errorCode,errorMessage)
             });
         }
 };
