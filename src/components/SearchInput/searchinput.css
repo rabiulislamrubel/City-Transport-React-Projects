@@ -1,0 +1,32 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #999;
+}
+.show-search-data {
+  background-color: #d7d7d7;
+  padding: 15px;
+}
+.pick-from-to {
+  background-color: coral;
+  padding: 20px 35px;
+  border-radius: 10px;
+}
+.search-btn button {
+  width: 100%;
+  background-color: lime;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.rent-detail {
+  background-color: #f2f2f2;
+  margin: 10px 0;
+  padding: 10px;
+}
+.rent-detail img {
+  width: 50px;
+}

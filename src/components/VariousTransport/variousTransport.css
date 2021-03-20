@@ -1,0 +1,17 @@
+.transport img {
+  width: 200px;
+  height: 150px;
+}
+.transport {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.transport h2 {
+  margin-top: 10px;
+}
+.transport-link {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  background-color: transparent;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+}
+.header ul li {
+  list-style: none;
+  display: block;
+  margin-right: 5px;
+  padding: 10px 25px;
+}
+.link {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+.btn {
+  background-color: coral;
+  text-decoration: none;
+  padding: 10px 25px;
+  color: #000;
+  font-size: 18px;
+  border-radius: 5px;
+}
