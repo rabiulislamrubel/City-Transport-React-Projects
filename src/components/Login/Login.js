@@ -16,7 +16,7 @@ const Login = () => {
     const history = useHistory();
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
-
+    console.log(shareData);
     const handleGoogleSignIn = () => {
         firebase.auth()
         .signInWithPopup(provider)
