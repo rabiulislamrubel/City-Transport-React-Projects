@@ -14,3 +14,9 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
 }
+
+@media all and (max-width: 600px) {
+  .inner-home {
+    grid-template-columns: 1fr;
+  }
+}

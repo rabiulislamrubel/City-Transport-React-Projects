@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './login.css';
@@ -13,6 +13,7 @@ const Login = () => {
     const { register, handleSubmit, errors } = useForm();
     var provider = new firebase.auth.GoogleAuthProvider();
     const [shareData, setShareData] = useContext(UesContext);
+    const [showErr, setShowErr] = useState('');
     const history = useHistory();
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
@@ -38,13 +39,12 @@ const Login = () => {
                     history.replace(from);
                 })
                 .catch((error) => {
-                    var errorCode = error.code;
                     var errorMessage = error.message;
-                    console.log(errorCode,errorMessage)
+                    setShowErr(errorMessage);
+                    console.log(errorMessage)
             });
         }
 };
-
     return (
     <div className='form'>
         <div className='inner-form'>
@@ -55,6 +55,7 @@ const Login = () => {
                 {errors.email && <span className='error'>This name is required</span>}
                 <input name="userPassword" type='password' ref={register({ required: true })} placeholder='You Password' className='input'/>
                 {errors.userPassword && <span className='error'>This password is required </span>}
+                {showErr && <p style={{color:'red'}}>{showErr}</p>}
                 <input type="submit" className='submit' value='Log In'/>
             
             </form>
